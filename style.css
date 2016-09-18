@@ -1,0 +1,260 @@
+/* GENERAL STYLE RULES */
+
+/* Basic button layout */
+.button_home
+{
+    background-color: dimgrey;
+    /*border: 1px solid dimgrey; */
+    height: 24px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 5px; 
+    text-align: center;
+    width: 120px;
+}
+
+
+/* Basic button links layout */
+.button_home a, .button_dash a 
+{
+    text-decoration: none;
+    font-family: "Century Gothic", sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: whitesmoke;
+}
+
+/* Basic titles layout */
+.title_home
+{
+    font-size: 24px;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 30px; 
+}
+
+/* Basic subtitle layout */
+.subtitle_home
+{
+    font-size: 19px;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 100;
+    color: dimgrey;
+    margin-bottom: 30px;
+}
+
+/* Basic subtitle layout for the dashboard */
+.subtitle_dash
+{
+    font-size: 16px;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 100;
+    color: dimgrey;
+}
+
+/* Styling for paragraphs added to forms that indicate errors */
+#target p, #targetcontact p, #success, #targetlogin p, #targetsign p, #target_pass p
+{
+    color: slateblue;
+    font-size: 15px; 
+    font-weight: 200;
+}
+
+h1
+{
+    color: #50E3C2;
+    text-align: center;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 100;
+}
+
+p, ul, li
+{
+    font-family: Tahoma, sans-serif;
+    font-weight: 100; 
+    text-align: justify;
+    color: #363535;
+}
+
+/* Homepage div styling */
+.dividerh1
+{
+    margin-bottom: 100px;
+}
+
+/*Image styling */
+.imghome, .icons
+{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.icons
+{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+/* Styling for contact us form */
+#contactus
+{
+    border: 1px solid gainsboro;
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+/* Form class in dash_learnmore.php */
+.lm
+{
+    width: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling for social media share buttons in dash_learnmore.php */
+#lm_share
+{
+    width: 159px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Display opportunities paragrah*/
+#reg 
+{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Paragraph in organisations.php */
+#em
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid gainsboro;
+    padding: 10px;
+    margin-top: 30px;
+    text-align: center;
+    width: inherit;
+}
+
+/* Class dashboard "boxes */
+.dashboard_div
+{
+    border: 1px solid gainsboro;
+    padding: 10px;
+}
+
+/* Divs dashboard */
+#offers, #orgs
+{
+    display: block;
+    float: left;
+    width: 850px;
+    margin-top: 5px;
+    height: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    min-height: 530px;
+}
+
+/* Div dashboard */
+#offers
+{
+    border: 1px solid gainsboro;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Styling for dashboard titles */
+.title_dash
+{
+    font-size: 20px;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 30px; 
+}
+
+/* Divs dashboards */
+#leaderb, #schedule
+{
+    display: block;
+    float: right;
+    width: 330px;
+    margin-top: 5px;
+    min-height: 530px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+/* Go back button */
+#back
+{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+/* Styling for buttons on dashboard */
+.button_dash 
+{
+    background-color: dimgrey;
+    height: 22px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 5px; 
+    text-align: center;
+    width: 160px;
+}
+
+/* Styling for reminder banner */
+#reminder {
+    padding: 5px;
+    border: 0px;
+    text-align: center;
+    font-family: "Tahoma", sans-serif;
+    color: white;
+    background-color: slateblue;
+    height: auto;
+}
+
+/* Styling of basic layout */
+.inside_column {
+    border: 1px solid gainsboro;
+    padding: 10px;
+}
+
+/* Parameters layout images */
+.col_r img {
+    display: block;
+}
+
+.col_r img, p{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Styling for image on offer page */
+.offers_pic {
+    border: 1px solid white;
+    width: 100%;
+}
+
+/* label dashboard for displayed offers */
+.offers_display
+{
+    width: 450px;
+}
+
+.orgs_display
+{
+    width: 300px;
+}

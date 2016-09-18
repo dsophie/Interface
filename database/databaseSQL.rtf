@@ -1,0 +1,829 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 -- phpMyAdmin SQL Dump\
+-- version 4.4.10\
+-- http://www.phpmyadmin.net\
+--\
+-- Client :  localhost:8889\
+-- G\'e9n\'e9r\'e9 le :  Ven 26 Ao\'fbt 2016 \'e0 16:01\
+-- Version du serveur :  5.5.42\
+-- Version de PHP :  7.0.8\
+\
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";\
+SET time_zone = "+00:00";\
+\
+--\
+-- Base de donn\'e9es :  `volunteer`\
+--\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `alert`\
+--\
+\
+CREATE TABLE `alert` (\
+  `idUser` int(11) NOT NULL,\
+  `signup1` tinyint(1) NOT NULL,\
+  `signup2` tinyint(1) NOT NULL,\
+  `signup3` tinyint(1) NOT NULL,\
+  `share1` tinyint(1) NOT NULL,\
+  `share2` tinyint(1) NOT NULL,\
+  `share3` tinyint(1) NOT NULL,\
+  `fol1` tinyint(1) NOT NULL,\
+  `fol2` tinyint(1) NOT NULL,\
+  `fol3` tinyint(1) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `alert`\
+--\
+\
+INSERT INTO `alert` (`idUser`, `signup1`, `signup2`, `signup3`, `share1`, `share2`, `share3`, `fol1`, `fol2`, `fol3`) VALUES\
+(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),\
+(1, 0, 0, 0, 0, 0, 0, 0, 0, 0),\
+(2, 1, 0, 0, 0, 0, 0, 0, 0, 0),\
+(3, 1, 0, 0, 0, 0, 0, 0, 0, 0),\
+(5, 1, 0, 0, 0, 0, 0, 0, 0, 0),\
+(8, 1, 1, 0, 1, 0, 0, 0, 0, 0),\
+(9, 1, 0, 0, 1, 0, 0, 0, 0, 0),\
+(10, 1, 0, 0, 0, 0, 0, 0, 0, 0),\
+(12, 1, 0, 0, 0, 0, 0, 0, 0, 0),\
+(16, 1, 0, 0, 1, 0, 0, 1, 0, 0),\
+(19, 1, 0, 0, 1, 0, 0, 1, 0, 0),\
+(22, 1, 0, 0, 1, 0, 0, 1, 0, 0),\
+(23, 1, 0, 0, 1, 0, 0, 1, 0, 0),\
+(26, 1, 0, 0, 0, 0, 0, 1, 0, 0),\
+(27, 1, 0, 0, 0, 0, 0, 1, 0, 0),\
+(28, 1, 0, 0, 0, 0, 0, 1, 0, 0),\
+(29, 1, 0, 0, 0, 0, 0, 1, 0, 0);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `Category`\
+--\
+\
+CREATE TABLE `Category` (\
+  `idCategory` int(11) NOT NULL,\
+  `name` varchar(55) NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `Category`\
+--\
+\
+INSERT INTO `Category` (`idCategory`, `name`) VALUES\
+(1, 'Administration'),\
+(2, 'Animal'),\
+(3, 'Arts'),\
+(4, 'Caring'),\
+(5, 'Children & Families'),\
+(6, 'Cooking'),\
+(7, 'Mentoring'),\
+(8, 'Environment'),\
+(9, 'Youths & Women');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `Contact`\
+--\
+\
+CREATE TABLE `Contact` (\
+  `idContact` int(11) NOT NULL,\
+  `name` varchar(100) NOT NULL,\
+  `email` varchar(100) NOT NULL,\
+  `telephone` int(11) NOT NULL,\
+  `message` text NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `Contact`\
+--\
+\
+INSERT INTO `Contact` (`idContact`, `name`, `email`, `telephone`, `message`) VALUES\
+(2, 'John Smith', 'john_smith@gmail.com', 78305405, 'Hello'),\
+(3, 'Sophie Delaux', 'sophie.delaux@outlook.fr', 789438437, 'Message'),\
+(4, 'Sophie', 'sophie.delaux@outlook.fr', 75535, 'Message'),\
+(5, 'Sophie', 'sophie.delaux@outlook.fr', 7, 'Message'),\
+(6, 'Sophie', 'so@aol.com', 7, 'Message'),\
+(7, 'Sophie Delaux', 'sophie.delaux@outlook.fr', 7, 'Message'),\
+(8, 'Sophie Delaux', 'sophie.delaux@outlook.fr', 749697111, 'Message'),\
+(9, 'Sophie Delaux', 'sophie.delaux@outlook.fr', 749697111, 'Message'),\
+(10, 'Sophie Delaux', 'sophie.delaux@outlook.fr', 749697111, 'message');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `contains`\
+--\
+\
+CREATE TABLE `contains` (\
+  `idContains` int(11) NOT NULL,\
+  `idSchedule` int(11) NOT NULL,\
+  `idSlot` int(11) NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `contains`\
+--\
+\
+INSERT INTO `contains` (`idContains`, `idSchedule`, `idSlot`) VALUES\
+(2, 1, 2),\
+(5, 19, 5),\
+(8, 18, 8),\
+(10, 13, 10),\
+(11, 12, 11),\
+(12, 17, 12),\
+(13, 11, 13),\
+(14, 7, 14),\
+(15, 5, 15),\
+(16, 8, 16),\
+(17, 16, 17),\
+(18, 16, 18),\
+(19, 19, 19),\
+(20, 22, 20),\
+(21, 2, 21),\
+(22, 3, 22),\
+(23, 3, 23),\
+(24, 9, 24),\
+(26, 23, 26),\
+(29, 26, 29),\
+(30, 27, 30),\
+(31, 28, 31),\
+(32, 29, 32);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `favorites`\
+--\
+\
+CREATE TABLE `favorites` (\
+  `idFav` int(11) NOT NULL,\
+  `idUser` int(11) NOT NULL,\
+  `idOffer` int(11) NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `favorites`\
+--\
+\
+INSERT INTO `favorites` (`idFav`, `idUser`, `idOffer`) VALUES\
+(1, 1, 7),\
+(2, 1, 4),\
+(3, 1, 6),\
+(7, 16, 2),\
+(8, 19, 4),\
+(10, 22, 8),\
+(12, 23, 8),\
+(13, 23, 9),\
+(20, 28, 1),\
+(21, 29, 10);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `follows`\
+--\
+\
+CREATE TABLE `follows` (\
+  `idFollow` int(11) NOT NULL,\
+  `idUser` int(11) NOT NULL,\
+  `idOrganisation` int(11) NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `follows`\
+--\
+\
+INSERT INTO `follows` (`idFollow`, `idUser`, `idOrganisation`) VALUES\
+(1, 1, 4),\
+(2, 19, 2),\
+(4, 19, 1),\
+(5, 16, 1),\
+(6, 19, 4),\
+(7, 19, 3),\
+(9, 23, 7),\
+(13, 26, 4),\
+(14, 27, 7),\
+(15, 28, 3),\
+(16, 29, 7);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `Illustration`\
+--\
+\
+CREATE TABLE `Illustration` (\
+  `idOffer` int(11) NOT NULL,\
+  `picture` text NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `Illustration`\
+--\
+\
+INSERT INTO `Illustration` (`idOffer`, `picture`) VALUES\
+(1, 'pictures/offers/1.jpg'),\
+(2, 'pictures/offers/2.jpg'),\
+(3, 'pictures/offers/3.jpg'),\
+(4, 'pictures/offers/4.jpg'),\
+(5, 'pictures/offers/5.jpg'),\
+(6, 'pictures/offers/6.jpg'),\
+(7, 'pictures/offers/7.jpg'),\
+(8, 'pictures/offers/8.jpg'),\
+(9, 'pictures/offers/9.jpg'),\
+(10, 'pictures/offers/10.jpg');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `interest_count`\
+--\
+\
+CREATE TABLE `interest_count` (\
+  `idUser` int(11) NOT NULL,\
+  `count` double NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `interest_count`\
+--\
+\
+INSERT INTO `interest_count` (`idUser`, `count`) VALUES\
+(16, 1),\
+(19, 1.5),\
+(22, 1),\
+(23, 2),\
+(26, 2),\
+(27, 2),\
+(28, 2),\
+(29, 2);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `Level`\
+--\
+\
+CREATE TABLE `Level` (\
+  `idLevel` int(11) NOT NULL,\
+  `pointsMin` int(11) NOT NULL,\
+  `pointsMax` int(11) NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `Level`\
+--\
+\
+INSERT INTO `Level` (`idLevel`, `pointsMin`, `pointsMax`) VALUES\
+(1, 0, 80),\
+(2, 81, 170),\
+(3, 151, 280),\
+(4, 281, 450),\
+(5, 451, 800),\
+(6, 801, 1100);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `Offer`\
+--\
+\
+CREATE TABLE `Offer` (\
+  `idOffer` int(11) NOT NULL,\
+  `nameOffer` varchar(55) NOT NULL,\
+  `idOrganisation` int(11) NOT NULL,\
+  `descriptOffer` text NOT NULL,\
+  `typeOffer` varchar(55) NOT NULL,\
+  `idCategory` int(11) NOT NULL,\
+  `timeRequired` int(11) NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `Offer`\
+--\
+\
+INSERT INTO `Offer` (`idOffer`, `nameOffer`, `idOrganisation`, `descriptOffer`, `typeOffer`, `idCategory`, `timeRequired`) VALUES\
+(1, 'Overnight and weekend care', 1, 'Volunteers are needed to offer overnight and weekend care to our training dogs. You also have the satisfaction of being a pivotal part of the process that sees a Guide Dog providing life changing independence to someone with sight loss.', 'comm', 2, 10),\
+(2, 'Dog walking', 1, 'Need volunteers to walk dogs for a few hours', 'comm', 2, 2),\
+(3, 'Administration support', 2, 'Community center needs an administration volunteer to manage reception and monitor emails', 'comm', 1, 2),\
+(4, 'Library help', 3, 'Stamping and sorting books, shelving them (correctly!!), helping visitors find what they want and encouraging them to take more, helping with outreach', 'comm', 1, 3),\
+(5, 'Helper cook', 4, 'Help needed to cook meals for homeless people', 'comm', 6, 5),\
+(6, 'Feast with us event support', 4, 'Volunteer needed to help during our major event called Feast with us where we organized a giant dinner', 'event', 6, 6),\
+(7, 'Support - Get to know ZAP', 5, 'Help us get known and help people in need by promoting mentoring!', 'event', 7, 5),\
+(8, 'Art class support', 6, 'We are currently looking for volunteers to help us during our arts classes', 'comm', 3, 2),\
+(9, 'Family support volunteer', 7, 'We are searching for volunteers to help us assist families and children. Your role will be to discuss with the families and provide them support', 'comm', 4, 4),\
+(10, 'DIY and Gardening Team', 8, 'We are searching for volunteers to help on small gardening or DIY tasks to emebelish the community', 'comm', 8, 3);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `Organisation`\
+--\
+\
+CREATE TABLE `Organisation` (\
+  `idOrganisation` int(11) NOT NULL,\
+  `nameOrganisation` varchar(55) NOT NULL,\
+  `locationOrganisation` varchar(55) NOT NULL,\
+  `descriptOrganisation` text NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `Organisation`\
+--\
+\
+INSERT INTO `Organisation` (`idOrganisation`, `nameOrganisation`, `locationOrganisation`, `descriptOrganisation`) VALUES\
+(1, 'Guide Dogs', 'Newcastle Upon Tyne', 'Training and care of future guide dogs'),\
+(2, 'Community Center', 'Sheffield', 'Volunteering group running a small community center'),\
+(3, 'Borderline Books', 'Gateshead', 'Borderline Books collects books from libraries, publishers and normal mortals who are clearing out their shelves. The books are stamped, counted, repaire or cleaned if necessary and shelved. We then invite local organisations supporting people who are homeless, recently released from prison, people struggling with addictions, womens refuges, youg peoples hostels, care homes, hospices, convalescent homes and others who for one reason or another cannot use the libraries or afford to buy books.'),\
+(4, 'KitchenHeart', 'London', 'Help homeless people by providing cooked nutritious meals'),\
+(5, 'ZAP', 'Durham', 'Our organisation focus on mentoring adults that need an extra help to take back the control of their life'),\
+(6, 'One step', 'London', 'We are a multi project organisations proposing different types of courses and classes to promote creativity and learning'),\
+(7, 'Children First', 'Manchester', 'Our charity aims to assist children and families in need'),\
+(8, 'Smile 2Life', 'Sheffield', 'We help the community by doing a number of actions daily and special events');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `Preferences`\
+--\
+\
+CREATE TABLE `Preferences` (\
+  `idUser` int(11) NOT NULL,\
+  `motivationChoice` varchar(55) NOT NULL,\
+  `idCategory1` int(11) NOT NULL,\
+  `idCategory2` int(11) NOT NULL,\
+  `idCategory3` int(11) NOT NULL,\
+  `idCategory4` int(11) NOT NULL,\
+  `idCategory5` int(11) NOT NULL,\
+  `allSelected` varchar(10) NOT NULL,\
+  `timeCommit` int(11) NOT NULL,\
+  `typeChoice` varchar(55) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `Preferences`\
+--\
+\
+INSERT INTO `Preferences` (`idUser`, `motivationChoice`, `idCategory1`, `idCategory2`, `idCategory3`, `idCategory4`, `idCategory5`, `allSelected`, `timeCommit`, `typeChoice`) VALUES\
+(1, 'social', 0, 0, 0, 0, 0, 'on', 0, 'no pref'),\
+(2, 'selfd', 2, 6, 7, 0, 0, '', 10, 'comm'),\
+(3, 'social', 0, 0, 0, 0, 0, 'on', 10, 'no pref'),\
+(4, 'selfd', 1, 6, 0, 0, 0, '', 10, 'no pref'),\
+(5, 'social', 0, 0, 0, 0, 0, 'on', 10, 'event'),\
+(6, 'selfd', 0, 0, 0, 0, 0, 'on', 310, 'no pref'),\
+(7, 'social', 1, 3, 4, 7, 0, '', 310, 'no pref'),\
+(8, 'selfd', 0, 0, 0, 0, 0, 'on', 310, 'comm'),\
+(9, 'social', 3, 6, 7, 8, 9, '', 310, 'comm'),\
+(10, 'social', 3, 6, 7, 0, 0, '', 0, 'no pref'),\
+(11, 'selfd', 0, 0, 0, 0, 0, 'on', 0, 'event'),\
+(12, 'social', 1, 4, 7, 0, 0, '', 0, 'comm'),\
+(13, 'selfd', 4, 5, 7, 8, 9, '', 0, 'no pref'),\
+(14, 'social', 0, 0, 0, 0, 0, 'on', 3, 'comm'),\
+(15, 'social', 0, 0, 0, 0, 0, 'on', 3, 'no pref'),\
+(16, 'selfd', 2, 3, 4, 6, 0, '', 3, 'no pref'),\
+(17, 'social', 1, 2, 0, 0, 0, '', 0, 'comm'),\
+(18, 'social', 1, 2, 8, 9, 0, '', 0, 'comm'),\
+(19, 'selfd', 1, 5, 7, 0, 0, '', 0, 'comm'),\
+(20, 'social', 5, 6, 7, 0, 0, '', 3, 'no pref'),\
+(21, 'social', 0, 0, 0, 0, 0, 'on', 0, 'no pref'),\
+(22, 'selfd', 0, 0, 0, 0, 0, 'on', 310, 'no pref'),\
+(23, 'social', 0, 0, 0, 0, 0, 'on', 310, 'no pref'),\
+(26, 'selfd', 0, 0, 0, 0, 0, 'on', 3, 'no pref'),\
+(27, 'selfd', 0, 0, 0, 0, 0, 'on', 310, 'no pref'),\
+(28, 'social', 0, 0, 0, 0, 0, 'on', 310, 'no pref'),\
+(29, 'social', 0, 0, 0, 0, 0, 'on', 0, 'no pref'),\
+(32, 'selfd', 1, 2, 3, 0, 0, '', 310, 'no pref');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `Profile`\
+--\
+\
+CREATE TABLE `Profile` (\
+  `idUser` int(11) NOT NULL,\
+  `idSchedule` int(11) NOT NULL,\
+  `points` int(11) NOT NULL,\
+  `idLevel` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `Profile`\
+--\
+\
+INSERT INTO `Profile` (`idUser`, `idSchedule`, `points`, `idLevel`) VALUES\
+(1, 1, 145, 2),\
+(2, 2, 70, 2),\
+(3, 3, 110, 2),\
+(4, 4, 25, 1),\
+(5, 5, 75, 2),\
+(6, 6, 25, 1),\
+(7, 7, 175, 3),\
+(8, 8, 650, 5),\
+(9, 9, 105, 2),\
+(10, 10, 270, 4),\
+(11, 11, 70, 2),\
+(12, 12, 75, 2),\
+(13, 13, 80, 2),\
+(14, 14, 25, 1),\
+(15, 15, 25, 1),\
+(16, 16, 205, 3),\
+(17, 17, 70, 2),\
+(18, 18, 150, 2),\
+(19, 19, 360, 4),\
+(20, 20, 25, 1),\
+(21, 21, 25, 1),\
+(22, 22, 160, 3),\
+(23, 23, 275, 3),\
+(26, 26, 120, 2),\
+(27, 27, 120, 2),\
+(28, 28, 135, 2),\
+(29, 29, 120, 2),\
+(30, 30, 25, 1),\
+(32, 31, 25, 1);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `Schedule`\
+--\
+\
+CREATE TABLE `Schedule` (\
+  `idSchedule` int(11) NOT NULL,\
+  `idUser` int(11) NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `Schedule`\
+--\
+\
+INSERT INTO `Schedule` (`idSchedule`, `idUser`) VALUES\
+(1, 1),\
+(2, 2),\
+(3, 3),\
+(4, 4),\
+(5, 5),\
+(6, 6),\
+(7, 7),\
+(8, 8),\
+(9, 9),\
+(10, 10),\
+(11, 11),\
+(12, 12),\
+(13, 13),\
+(14, 14),\
+(15, 15),\
+(16, 16),\
+(17, 17),\
+(18, 18),\
+(19, 19),\
+(20, 20),\
+(21, 21),\
+(22, 22),\
+(23, 23),\
+(26, 26),\
+(27, 27),\
+(28, 28),\
+(29, 29),\
+(30, 30),\
+(31, 32);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `share_count`\
+--\
+\
+CREATE TABLE `share_count` (\
+  `idUser` int(11) NOT NULL,\
+  `count` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `share_count`\
+--\
+\
+INSERT INTO `share_count` (`idUser`, `count`) VALUES\
+(8, 1),\
+(9, 1),\
+(16, 1),\
+(19, 2),\
+(22, 1),\
+(23, 1);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `signup_count`\
+--\
+\
+CREATE TABLE `signup_count` (\
+  `idUser` int(11) NOT NULL,\
+  `count` int(11) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `signup_count`\
+--\
+\
+INSERT INTO `signup_count` (`idUser`, `count`) VALUES\
+(2, 1),\
+(3, 2),\
+(5, 1),\
+(7, 1),\
+(8, 14),\
+(9, 1),\
+(10, 6),\
+(11, 1),\
+(12, 1),\
+(13, 1),\
+(16, 2),\
+(17, 1),\
+(18, 1),\
+(19, 1),\
+(22, 1),\
+(23, 2),\
+(26, 1),\
+(27, 1),\
+(28, 1),\
+(29, 1);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `Slot`\
+--\
+\
+CREATE TABLE `Slot` (\
+  `idSlot` int(11) NOT NULL,\
+  `idOrganisation` int(11) NOT NULL,\
+  `idOffer` int(11) NOT NULL,\
+  `date` varchar(55) NOT NULL,\
+  `hour` varchar(55) NOT NULL,\
+  `numberHours` int(11) NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `Slot`\
+--\
+\
+INSERT INTO `Slot` (`idSlot`, `idOrganisation`, `idOffer`, `date`, `hour`, `numberHours`) VALUES\
+(2, 3, 4, '02/09/2016', '17:00', 3),\
+(5, 2, 3, '07/09/2016', '10:00', 5),\
+(8, 3, 4, '13/09/2016', '15:00', 3),\
+(10, 5, 7, '20/09/2016', '12:00', 5),\
+(11, 3, 4, '01/09/2016', '17:00', 3),\
+(12, 2, 3, '12/09/2016', '13:00', 3),\
+(13, 4, 6, '29/08/2016', '16:00', 6),\
+(14, 3, 4, '12/10/2016', '15:00', 3),\
+(15, 4, 6, '22/08/2016', '16:00', 6),\
+(16, 4, 5, '15/08/2016', '15:00', 5),\
+(17, 1, 2, '15/10/2016', '18:00', 2),\
+(18, 2, 3, '31/09/2016', '18:00', 2),\
+(19, 4, 6, '15/09/2016', '14:00', 6),\
+(20, 7, 9, '28/08/2016', '16:00', 4),\
+(21, 4, 5, '07/09/2016', '14:00', 7),\
+(22, 8, 10, '07/02/2017', '17:00', 3),\
+(23, 8, 10, '08/09/2016', '18:00', 5),\
+(24, 8, 10, '29/09/2016', '14:00', 3),\
+(26, 7, 9, '12/09/2016', '16:00', 4),\
+(29, 3, 4, '30/08/2016', '14:00', 5),\
+(30, 4, 5, '31/08/2016', '15:00', 5),\
+(31, 4, 6, '31/08/2016', '14:00', 6),\
+(32, 1, 1, '31/08/2016', '20:00', 10);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Structure de la table `User`\
+--\
+\
+CREATE TABLE `User` (\
+  `idUser` int(11) NOT NULL,\
+  `firstName` varchar(100) NOT NULL,\
+  `lastName` varchar(100) NOT NULL,\
+  `email` varchar(100) NOT NULL,\
+  `password` varchar(20) NOT NULL,\
+  `dateBirth` varchar(100) NOT NULL,\
+  `telephone` int(11) NOT NULL,\
+  `country` varchar(100) NOT NULL,\
+  `city` varchar(100) NOT NULL,\
+  `postcode` varchar(100) NOT NULL,\
+  `address` text NOT NULL\
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;\
+\
+--\
+-- Contenu de la table `User`\
+--\
+\
+INSERT INTO `User` (`idUser`, `firstName`, `lastName`, `email`, `password`, `dateBirth`, `telephone`, `country`, `city`, `postcode`, `address`) VALUES\
+(1, 'John', 'Smith', 'john_smith@gmail.com', 'jsmith', '15/09/1987', 7654321, 'United Kingdom', 'Manchester', 'M13BW', 'Rondale Canal Tow Path'),\
+(2, 'Jane', 'Joe', 'jane.joe@outlook.com', 'jjoe', '30/01/1991', 7639430, 'United Kingdom', 'London', 'WC1H8ER', '54 Argyle St'),\
+(3, 'Andrea', 'Hampton', 'a.hampton@gmail.com', 'ahampton', '12/09/1987', 7654322, 'United Kingdom', 'Sheffield', 'S14LY', 'Station road'),\
+(4, 'Paul', 'Logan', 'paul_logan@gmail.com', 'plogan', '15/08/1992', 2147483647, 'United Kingdom', 'Liverpool', 'L23KY', 'Main street, 10'),\
+(5, 'Marie', 'Lutter', 'marielutter@yahoo.com', 'mlutter', '07/08/1994', 749349430, 'United Kingdom', 'Aberdeen', 'A13LY', '8 Main street'),\
+(6, 'John', 'Maan', 'jmaan@outlook.com', 'jmaan', '01/08/1991', 483943043, 'United Kingdom', 'Newcastle Upon Tyne', 'NE14LY', '5 Leazes Terrace'),\
+(7, 'Michael', 'Okumb', 'michael_o@yahoo.com', 'mokumb', '07/06/1995', 2147483647, 'United Kingdom', 'Bristol', 'B34TY', 'Old Square, 3'),\
+(8, 'Emily', 'Madon', 'emily.madon@gmail.com', 'emadon', '15/08/1990', 2147483647, 'United Kingdom', 'Newcastle Upon Tyne', 'NE2TYL', '23 Northumberland Street'),\
+(9, 'Anan', 'Dok', 'anan_dok@gmail.com', 'adok', '31/12/1991', 2147483647, 'United Kingdom', 'Edinburgh', 'E57LI', '6 Round lane'),\
+(10, 'Jenny', 'Walls', 'jennywalls@aol.com', 'jwalls', '25/08/1993', 743430943, 'United Kingdom', 'Sheffield', 'S15LY', '10 parrallell street'),\
+(11, 'Ashley', 'Johnson', 'ajohnson@gmail.com', 'ajohnson', '31/12/1989', 79439843, 'United Kingdom', 'Newcastle Upon Tyne', 'NE4TY5', '20 Jesmond road'),\
+(12, 'Lea', 'Dayn', 'lea_dayn@yahoo.com', 'ldayn', '18/05/1991', 74943453, 'United Kingdom', 'London', 'WC1H8ER', '175 St Pancras Road'),\
+(13, 'Chen', 'Liu', 'cliu@gmail.com', 'cliu', '15/10/1987', 743943043, 'United Kingdom', 'Briston', 'B5FT8', '15 North street'),\
+(14, 'Jen', 'Anniston', 'j_anniston@gmail.com', 'janniston', '05/05/1995', 739494356, 'United Kingdom', 'Newcastle Upon Tyne', 'NE15TU', '3 Eldon Square'),\
+(15, 'Anthony', 'Dinozzo', 'tony.dinozzo@outlook.com', 'tdinozzo', '06/07/1985', 743093585, 'United Kingdom', 'Manchester', 'M13BW', '15 Stram Road'),\
+(16, 'John', 'Dorian', 'jd@hotmail.com', 'jdorian', '26/11/1990', 74395305, 'United Kingdom', 'Aberdeen', 'A13LT', '14 jump street'),\
+(17, 'James', 'Andrews', 'james.andrews@aol.com', 'jandrews', '20/08/1991', 2147483647, 'United Kingdom', 'Manchester', 'M13BW', '10 Quare Lane'),\
+(18, 'Hermione', 'Granger', 'h.granger@gmail.com', 'hgranger', '15/07/1996', 764395435, 'United Kingdom', 'Newcastle Upon Tyne', 'NE14LY', '10 leazes terrace'),\
+(19, 'Harry', 'Potter', 'harry_potter@gmail.com', 'hpotter', '31/07/1989', 75402564, 'United Kingdom', 'London', 'WC1H8EL', '15 Main street'),\
+(20, 'Marie', 'Des', 'marie_des@gmail.com', 'mdes', '10/12/1992', 73549640, 'United Kingdom', 'London', 'WC5H68', '20 Rick road'),\
+(21, 'Joe', 'Jonas', 'joe_jonas@gmail.com', 'jjonas', '14/02/1990', 75305495, 'United Kingdom', 'Newcastle Upon Tyne', 'NE25LT', '29 Grey street'),\
+(22, 'Paul', 'James', 'paul_james@outlook.com', 'pjames', '09/02/1992', 7843, 'United Kingdom', 'Sheffield', 'S14LY', '15 Street lane'),\
+(23, 'Mark', 'Down', 'mark_down@aol.com', 'mdown', '07/11/1991', 7954, 'United Kingdom', 'Newcastle', 'NE14LY', '19 Northumberland Stret'),\
+(26, 'Solene', 'Jones', 's_jones@aol.com', 'sjones', '07/02/1991', 2147483647, 'United Kingdom', 'Newcastle', 'NE14LY', '10 Leazes terrac'),\
+(27, 'Andrea', 'Thompson', 'andrea_thompson@gmail.com', 'pass', '07/02/1991', 749697111, 'United Kingdom', 'Newcastle Upon Tyne', 'NE14LY', '10 Leazes Terrace'),\
+(28, 'Sophie', 'Delaux', 'sophie.delaux@outlook.fr', 'pass', '07/08/1991', 749697111, 'United Kingdom', 'Newcastle Upon Tyne', 'NE14LY', '&'),\
+(29, 'Paul', 'Jameson', 'a_jameson@outlook.fr', 'ajameson', '31/09/1990', 749697111, 'United Kingdom', 'Sheffield', 'S14LY', '15 Anderson road'),\
+(32, 'Mike', 'Pol', 'mikepol@aol.com', 'mpol', '23/08/1991', 749697111, 'United Kingdom', 'Bristol', 'B15LY', '15 high street');\
+\
+--\
+-- Index pour les tables export\'e9es\
+--\
+\
+--\
+-- Index pour la table `alert`\
+--\
+ALTER TABLE `alert`\
+  ADD PRIMARY KEY (`idUser`);\
+\
+--\
+-- Index pour la table `Category`\
+--\
+ALTER TABLE `Category`\
+  ADD PRIMARY KEY (`idCategory`);\
+\
+--\
+-- Index pour la table `Contact`\
+--\
+ALTER TABLE `Contact`\
+  ADD PRIMARY KEY (`idContact`);\
+\
+--\
+-- Index pour la table `contains`\
+--\
+ALTER TABLE `contains`\
+  ADD PRIMARY KEY (`idContains`);\
+\
+--\
+-- Index pour la table `favorites`\
+--\
+ALTER TABLE `favorites`\
+  ADD PRIMARY KEY (`idFav`);\
+\
+--\
+-- Index pour la table `follows`\
+--\
+ALTER TABLE `follows`\
+  ADD PRIMARY KEY (`idFollow`),\
+  ADD KEY `idOrganisation` (`idOrganisation`);\
+\
+--\
+-- Index pour la table `Illustration`\
+--\
+ALTER TABLE `Illustration`\
+  ADD PRIMARY KEY (`idOffer`);\
+\
+--\
+-- Index pour la table `interest_count`\
+--\
+ALTER TABLE `interest_count`\
+  ADD PRIMARY KEY (`idUser`);\
+\
+--\
+-- Index pour la table `Level`\
+--\
+ALTER TABLE `Level`\
+  ADD PRIMARY KEY (`idLevel`);\
+\
+--\
+-- Index pour la table `Offer`\
+--\
+ALTER TABLE `Offer`\
+  ADD PRIMARY KEY (`idOffer`);\
+\
+--\
+-- Index pour la table `Organisation`\
+--\
+ALTER TABLE `Organisation`\
+  ADD PRIMARY KEY (`idOrganisation`);\
+\
+--\
+-- Index pour la table `Preferences`\
+--\
+ALTER TABLE `Preferences`\
+  ADD PRIMARY KEY (`idUser`);\
+\
+--\
+-- Index pour la table `Profile`\
+--\
+ALTER TABLE `Profile`\
+  ADD PRIMARY KEY (`idUser`);\
+\
+--\
+-- Index pour la table `Schedule`\
+--\
+ALTER TABLE `Schedule`\
+  ADD PRIMARY KEY (`idSchedule`);\
+\
+--\
+-- Index pour la table `share_count`\
+--\
+ALTER TABLE `share_count`\
+  ADD PRIMARY KEY (`idUser`);\
+\
+--\
+-- Index pour la table `signup_count`\
+--\
+ALTER TABLE `signup_count`\
+  ADD PRIMARY KEY (`idUser`);\
+\
+--\
+-- Index pour la table `Slot`\
+--\
+ALTER TABLE `Slot`\
+  ADD PRIMARY KEY (`idSlot`);\
+\
+--\
+-- Index pour la table `User`\
+--\
+ALTER TABLE `User`\
+  ADD PRIMARY KEY (`idUser`);\
+\
+--\
+-- AUTO_INCREMENT pour les tables export\'e9es\
+--\
+\
+--\
+-- AUTO_INCREMENT pour la table `Category`\
+--\
+ALTER TABLE `Category`\
+  MODIFY `idCategory` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;\
+--\
+-- AUTO_INCREMENT pour la table `Contact`\
+--\
+ALTER TABLE `Contact`\
+  MODIFY `idContact` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;\
+--\
+-- AUTO_INCREMENT pour la table `contains`\
+--\
+ALTER TABLE `contains`\
+  MODIFY `idContains` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;\
+--\
+-- AUTO_INCREMENT pour la table `favorites`\
+--\
+ALTER TABLE `favorites`\
+  MODIFY `idFav` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;\
+--\
+-- AUTO_INCREMENT pour la table `follows`\
+--\
+ALTER TABLE `follows`\
+  MODIFY `idFollow` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;\
+--\
+-- AUTO_INCREMENT pour la table `Level`\
+--\
+ALTER TABLE `Level`\
+  MODIFY `idLevel` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;\
+--\
+-- AUTO_INCREMENT pour la table `Offer`\
+--\
+ALTER TABLE `Offer`\
+  MODIFY `idOffer` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;\
+--\
+-- AUTO_INCREMENT pour la table `Organisation`\
+--\
+ALTER TABLE `Organisation`\
+  MODIFY `idOrganisation` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;\
+--\
+-- AUTO_INCREMENT pour la table `Schedule`\
+--\
+ALTER TABLE `Schedule`\
+  MODIFY `idSchedule` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;\
+--\
+-- AUTO_INCREMENT pour la table `Slot`\
+--\
+ALTER TABLE `Slot`\
+  MODIFY `idSlot` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;\
+--\
+-- AUTO_INCREMENT pour la table `User`\
+--\
+ALTER TABLE `User`\
+  MODIFY `idUser` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;}

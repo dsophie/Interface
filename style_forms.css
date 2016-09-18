@@ -1,0 +1,167 @@
+/* STYLE FOR FORMS ELEMENTS */
+
+/* Fieldset (forms) layout */
+fieldset
+{
+    max-width: 1200px;
+    font-size: 20px;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 1px solid gainsboro;
+    text-align: left;
+    color: #50E3C2;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 100;
+    padding-bottom: 3px; 
+    margin-bottom: 20px; 
+    height: auto;
+}
+
+.checkbox
+{
+    display: grid;
+    width: 70px;
+}
+
+.questions
+{
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    border: 1px solid gainsboro;
+    width: 800px; 
+}
+
+#loginbox
+{
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    border: 1px solid gainsboro;
+    width: 400px; 
+    padding: 5px;
+}
+
+
+/*Contact us*/
+
+input, textarea, select
+{
+    margin: 10px;
+    border: 1px solid gainsboro;
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+    color: dimgrey;
+    height: 20px; 
+}
+
+input, textarea
+{
+    width: 200px;
+}
+
+.date
+{
+    width: 100px; 
+}
+
+label
+{
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+    color: dimgray;
+    margin-left: 12px;
+    text-align: left;
+    display: inline-block;
+    width: auto;
+    font-size: 14px;
+}
+
+
+/* Submit_dash => Learn more page
+submit_dash_main => Dashboard home page buttons */
+
+#submit, #loginsubmit, .submit_dash, .submit_dash_main, #slot
+{
+    color: white;
+    font-family: Century Gothic, sans-serif;
+    font-size: 14px;
+    background-color: dimgrey;
+    width: auto;
+    height: 30px;
+}
+
+.button_dash
+{
+    color: white;
+    font-family: Century Gothic, sans-serif;
+    font-size: 14px;
+    background-color: #50E3C2;
+    width: 180px;
+    height: 20px;
+    border: 0;
+}
+
+.radio
+{
+    width: 70px; 
+}
+
+.div_dash input
+{
+    float: left;   
+}
+
+form 
+{
+    display: inline-block;
+}
+
+.param_forms {
+    text-align: left;
+}
+
+.signup_label {
+    display: inline;
+}
+
+progress {
+    display: block;
+    content: attr(value);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 1px solid gainsboro;
+    height: 20px;
+}
+
+/* Progress bar value color for Firefox, Chrome and Opera */
+progress::-moz-progress-bar 
+{
+    background: dimgrey;
+}
+
+progress::-webkit-progress-value
+{
+    background: dimgrey;
+}
+
+#slot {
+    border: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+}
+
+#related_opp {
+    margin-left: 20px;
+}
+
+.label_param1 {
+    width: 200px;
+}
+
+.label_sch 
+{
+    width: 280px;
+}

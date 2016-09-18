@@ -1,0 +1,150 @@
+/* Main content */
+.block {
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    height: auto;
+    max-width: 1200px;
+}
+
+/* Sidebar */
+#sidebar
+{
+    max-width: 200px;
+}
+
+/* Main content */
+#main
+{
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+} 
+
+/* Styling content for dashboard */
+#sidebar_dash
+{
+    max-width: 200px;
+}
+
+#main_dash
+{
+    max-width: 1000px;
+
+} 
+
+.block_dash
+{
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    max-width: 1000px;
+    height: auto;
+}
+
+footer
+{
+    clear: both;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/*Header */
+#reminder
+{
+    clear: both;
+    width: auto;
+}
+
+#share, #reminder
+{
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 1px solid gainsboro;
+    text-align: center;
+}
+
+#share div
+{
+    display: inline-block;
+}
+
+/* Responsive design for the dashboard */
+/* Source: http://codepen.io/johnstonian/pen/Bpbtl/ */
+
+html 
+{
+    box-sizing: border-box; /* Width and height properties include: content, padding and border*/
+}
+
+
+*, *:before, *:after 
+{
+    box-sizing: inherit; 
+}
+
+body 
+{ 
+    margin: 5px;
+}
+
+/* Clear floats on both header and footer */
+footer, header 
+{ 
+    position: relative; 
+    clear: both; 
+}
+
+.left-column, .right-column, footer, header 
+{  
+    border: 1px solid gainsboro; 
+    padding: 1.5em;
+    margin: .5em; 
+}
+
+.left-column, .right-column
+{
+    border: 0px;
+    padding: 0.5em;
+}
+
+/* MEDIA QUERIES 
+What to do when the screen reduce in size */
+@media screen and (min-width: 760px ) {
+
+    .columns-container 
+    { 
+        float: left;
+    }
+
+    .left-column 
+    { 
+        margin-right: 20em;
+        float: left;
+    }
+
+    .right-column 
+    { 
+        width: 18.75em;
+        margin-left: -19.3em;
+        float: left;
+    }   
+}
+
+@media screen and (max-width: 640px)
+{
+    .offers_display
+    {
+        width: auto;
+    }
+    
+    .orgs_display
+    {
+        width: auto;
+    }
+}

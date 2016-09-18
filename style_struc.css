@@ -1,0 +1,218 @@
+/* STYLING FOR STRUCTURAL ELEMENTS: HEADER, FOOTER AND NAV */
+
+
+/*Header styling*/
+header
+{
+   /* border: 1px solid gainsboro; */
+    background-image: url("pictures/pictures_css/gradient2.png");
+    font-family: "Century Gothic", sans-serif;
+    background-size: 100%;
+}
+
+#dashboard_header
+{
+    border: 1px solid gainsboro;
+    font-family: "Century Gothic", sans-serif;
+    background-image: url("pictures/pictures_css/gradient2.png");
+    background-size: 100%;
+}
+
+.title_header
+{
+    color: dimgrey;
+    font-weight: 100;
+}
+
+/* Styling of title in header of dashboard */
+#headerdash
+{
+    text-align: center;
+    height: auto;
+    clear: both;
+}
+
+#headerdash h1
+{
+    font-size: 24px;
+}
+
+#headerdash h2
+{
+    font-size: 19px;
+    font-style: italic;
+}
+
+/* Styling of div in main pages */
+#headerdiv
+{
+    clear: both;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* Dashboard nav */
+#menu
+{
+    float: right;
+    display: block;
+}
+
+/*Buttons navigation bar */
+#button_nav1
+{
+    background-color: dimgrey; 
+    width: 60px;
+    margin-right: 30px; 
+}
+
+#button_nav1 a, #button_nav2 a, #button_nav3 a
+{
+   color: white; 
+}
+
+#button_nav2
+{
+    background-color: dimgrey;
+     width: 83px;
+    margin-right: 30px; 
+}
+
+#button_nav3
+{
+    background-color: dimgrey;
+    width: 125px;
+}
+
+/* Change when buttons are hovered by mouse */
+#button_nav1:hover, #button_nav2:hover, #button_nav3:hover
+{
+    background-color: #2D3233;
+}
+
+/*Navigation bar styling */
+.ulnav
+{
+    float: left;
+    margin: 35px;
+    padding-bottom: 10px;
+}
+
+.ulnav li
+{
+    display: inline-block;
+    padding: 10px;
+    color: dimgrey;
+}
+
+.ulnav li a
+{
+    text-decoration: none;
+    color: dimgrey;
+    padding-right: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.ulnav li a:hover
+{
+    color: white;
+}
+
+/* Logo styling */
+#logo
+{
+   float: left;
+}
+
+#dash_logo
+{
+    height: auto;
+    max-width: 300px;
+}
+
+
+#logo_p {
+    margin: 0;
+}
+
+#name_user {
+    font-weight: 400;
+}
+
+/*Footer styling*/
+footer
+{
+    clear: both;
+    border: 1px solid gainsboro;
+    padding: 10px; 
+    margin-top: 30px;
+    text-align: center;
+    color: dimgrey;
+    font-family: Century Gothic, sans-serif;
+    font-size: 13px;
+    height: auto;
+}
+
+.footerdivs
+{
+    display: inline-block;
+    margin-right: 30px;
+    text-align: left;
+}
+
+.footerdivs p
+{
+    display: block;
+}
+
+.footerdivs .socialmedia
+{
+    display: inline;
+}
+
+/*#social
+{
+    margin-bottom: 57px;
+} */
+
+/* Social media share buttons styling */
+.socialmedia
+{
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+}
+
+footer a
+{
+     color: dimgrey;
+    text-decoration: none;
+}
+
+#fb 
+{
+    background-image: url("pictures/facebook.png");
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+#twitter
+{
+     background-image: url("pictures/twitter.png");
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+#linkedin
+{
+     background-image: url("pictures/linkedin.png");
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+#social {
+    margin-bottom: 57px;
+}
